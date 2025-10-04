@@ -1,96 +1,5 @@
 @charset "UTF-8";
 
-/* =================================================================== 
- * Lounge Main Stylesheet
- * Template Ver. 1.0.0
- * 05-03-2025
- * ------------------------------------------------------------------
- *
- * TOC:
- *
- * # SETTINGS
- *      ## font families
- *      ## colors
- *      ## shadows
- *      ## easing functions
- *      ## spacing, radius and typescale
- *      ## type variables
- *      ## grid variables
- * # CSS RESET
- * # GRID
- *      ## extra large devices
- *      ## large devices
- *      ## medium devices
- *      ## tablet devices
- *      ## mobile devices
- *      ## small mobile devices
- *      ## additional column stackpoints 
- * # CSS GRID Layout Tools
- *      ## Grid Block 
- *      ## grid columns
- * # BASE SETUP
- * # UTILITY CLASSES
- * # TYPOGRAPHY 
- *      ## base type styles
- *      ## additional typography classes
- *      ## lists
- *      ## media 
- *      ## spacing
- *
- *
- * # PRELOADER
- *      ## page loaded
- * # FORM 
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- * # BUTTONS
- * # TABLE
- * # COMPONENTS
- *      ## pagination 
- *      ## alert box 
- *      ## skillbars
- *      ## stats tabs
- *
- *
- * # THEME-SPECIFIC SHARED STYLES
- *      ## section header
- *      ## social list
- *      ## swiper overrides
- *      ## glightbox overrides
- * # PAGE WRAP
- * # SITE HEADER
- *      ## logo
- *      ## main navigation
- *      ## mobile menu toggle
- * # INTRO
- *      ## intro content
- *      ## intro scroll down
- *      ## intro transitions
- * # ABOUT
- *      ## about content
- * # MENU
- *      ## tab navigations
- *      ## tab contents
- * # GALLERY
- *      ## gallery items
- * # TESTIMONIALS
- * # FOOTER
- *      ## copyright
- *      ## go top
- *
- *
- * ------------------------------------------------------------------ */
-
-
-/* ===================================================================
- * # SETTINGS
- *
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## font families
- * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap");
 
 :root {    
@@ -101,18 +10,9 @@
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
-/* ------------------------------------------------------------------- 
- * ## colors
- * ------------------------------------------------------------------- */
+
 :root {
-  /* theme colors
-   * generated using 
-   * Tailwind CSS Color Generator
-   * (https://uicolors.app/generate/)
-   * 
-   * color-1 (#C73E1D)
-   * color-2 (#D1C1B3)
-   */
+
     --color-1-50                  : #f4f9f7;
     --color-1-100                 : #daede5;
     --color-1-200                 : #b5dacb;
@@ -139,11 +39,6 @@
     --color-2-950                 : #30211a;
     --color-2                     : var(--color-2-500);
 
-  /* neutrals
-   * generated using 
-   * Tint & Shade Generator 
-   * (https://maketintsandshades.com/)
-   */
     --color-neutral-50            : #efefef;
     --color-neutral-100           : #dfe0e0;
     --color-neutral-150           : #cfd0d0;
@@ -244,12 +139,9 @@
     --color-loader-light          : var(--color-white);
 }
 
-/* ------------------------------------------------------------------- 
- * ## shadows
- * ------------------------------------------------------------------- */
+
 :root {
-  /* shadow color in HSL
-   */
+
     --shadow-color: 0, 0%, 0%;
 
     --shadow-low  :
@@ -268,19 +160,15 @@
         0 32px 32px -2.2px hsla(var(--shadow-color), 0.08);
 }
 
-/* ------------------------------------------------------------------- 
- * ## easing functions
- * ------------------------------------------------------------------- */
+
 :root {
-  /* Standard easing functions 
-   */
+
     --ease-linear         : linear;
     --ease-in             : ease-in;
     --ease-out            : ease-out;
     --ease-in-out         : ease-in-out;
 
-  /* Smooth and natural curves 
-   */
+
     --ease-smooth         : cubic-bezier(0.25, 0.1, 0.25, 1);
     --ease-smooth-in      : cubic-bezier(0.42, 0, 1, 1);
     --ease-smooth-out     : cubic-bezier(0, 0, 0.58, 1);
@@ -360,27 +248,7 @@
     --vspace-9_5      : calc(9.5 * var(--space));
     --vspace-10       : calc(10 * var(--space));
 
-  /* type scale
-   * ratio 1          :2 | base: 20px
-   * -------------------------------------------------------
-   *
-   * --text-3huge     = (148.60px)
-   * --text-2huge     = (123.83px)
-   * --text-huge      = (103.20px)
-   * --text-3display  = (86.00px)
-   * --text-2display  = (71.66px)
-   * --text-display   = (59.72px)
-   * --text-3xl       = (49.77px)
-   * --text-2xl       = (41.47px)
-   * --text-xl        = (34.56px)
-   * --text-lg        = (28.80px)
-   * --text-md        = (24.00px)
-   * --text-base      = (20.00px) BASE
-   * --text-sm        = (16.67px)
-   * --text-xs        = (13.89px)
-   *
-   * ---------------------------------------------------------
-   */
+
     --text-scale-ratio: 1.2;
     --text-base       : var(--base-font-size);
     --text-xs         : calc((var(--text-base) / var(--text-scale-ratio)) / var(--text-scale-ratio));
@@ -505,15 +373,7 @@
 }
 
 
-/* ====================================================================
- * # CSS RESET
- *
- *
- * --------------------------------------------------------------------
- * http://meyerweb.com/eric/tools/css/reset/ 
- * v2.0 | 20110126
- * License: none (public domain)
- * -------------------------------------------------------------------- */
+
 html,
 body,
 div,
@@ -3662,12 +3522,22 @@ td:last-child {
 
 .intro-block-content__pic {
     position: relative;
+    width: 100%;
+    max-width: 300px;  /* atur sesuai kebutuhan */
+    aspect-ratio: 1 / 1; /* bikin selalu kotak */
+    background: #111;  /* kasih background gelap biar kontras */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px; /* opsional */
 }
 
 .intro-block-content__pic img {
-    margin        : 0;
-    vertical-align: bottom;
-    aspect-ratio  : 1050/600;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* biar proporsional, tidak ketarik */
+    filter: brightness(0.9); /* bikin agak gelap */
 }
 
 .intro-block-content__text {
@@ -4986,4 +4856,46 @@ td:last-child {
         font-size  : var(--text-sm);
         line-height: var(--vspace-0_75);
     }
+}
+
+.intro-header {
+  margin: 0;
+  padding: 0;
+}
+
+.intro-header__overline {
+  margin-bottom: 0.25rem;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.intro-header__medium-type {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.section-header {
+  position: relative; /* supaya ::after bisa diposisikan */
+  display: inline-block; /* biar efeknya ikut ukuran teks */
+}
+
+.section-header .text-display-title {
+  position: relative;
+  z-index: 1; /* teks tetap di atas gradasi */
+}
+
+/* Efek gradasi shadow */
+.section-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 110%;   /* agak lebih besar dari teks */
+  height: 50%;   /* atur tinggi efek */
+  background: linear-gradient(135deg, rgba(22, 61, 102, 0.4), rgba(63, 98, 237, 0.4));
+  filter: blur(25px);  /* bikin glowing shadow */
+  border-radius: 50%;  /* biar lembut */
+  z-index: 0; /* di bawah teks */
 }
